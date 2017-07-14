@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en" class="html">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Portfolio: Johannes Huster</title>
+  <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body class="body body_page-portfolio">
+  <header class="header header_border-bottom">
+    <figure class="header__logo">
+      <img class="image" src="images/logo_300.png" alt="Logo Johannes Huster">
+    </figure>
+    <div class="header__heading-group">
+      <h1 class="h header__h">Johannes Huster</h1>
+      <h2 class="h header__h header__h_pos-bottom">Full Stack Web Developer</h2>
+    </div>
+  </header>
+
+  <main class="main">
+    <section class="hero">
+       <!-- Using srcset and sizes attributes for responsive images; This
+       gives the browser enough information to choose the best file, based on
+       current viewport and DPR of device. Fallback in src attribute -->
+      <img class="image" src="images/hero-image_1500w.jpg" srcset="images/hero-image_2000w.jpg 2000w, images/hero-image_1500w.jpg 1500w, images/hero-image_1000w.jpg 1000w, images/hero-image_500w.jpg 500w" sizes="(min-width: 1000px) 1000px, 96vw" alt="CSS Code displayed on a MacBook">
+    </section>
+
+    <section class="portfolio">
+      <h2 class="h portfolio__h">Featured Work</h2>
+      <!-- Using flex box for responsive portfolio grid. Changing width
+      (in percentages) and padding of flex items with CSS media queries. -->
+      <div class="portfolio__flex-container">
+        <figure class="portfolio__flex-item">
+          <img class="image" src="images/interior-island_700w.jpg" alt="Interior Island Website Screenshot" srcset="images/interior-island_1000w.jpg 1000w, images/interior-island_700w.jpg 700w, images/interior-island_350w.jpg 350w" sizes="(min-width: 1040px) 324px, (min-width: 640px) 47vw, 93vw">
+          <figcaption class="portfolio__caption">
+            <h3 class="h portfolio__figure-h">Interior Island</h3>
+            <p class="portfolio__p">Visit at <a class="portfolio__a" href="https://www.interior-island.de/">interior-island.de/</a>. Website build on top of WordPress theme. Many modifications made using JavaScript, HTML, CSS and PHP.</p>
+          </figcaption>
+        </figure>
+        <figure class="portfolio__flex-item">
+          <img class="image" src="images/citizen-frame_700w.jpg" alt="Citizen Frame Website Screenshot" srcset="images/citizen-frame_1000w.jpg 1000w, images/citizen-frame_700w.jpg 700w, images/citizen-frame_350w.jpg 350w" sizes="(min-width: 1040px) 324px, (min-width: 640px) 47vw, 93vw">
+          <figcaption class="portfolio__caption">
+            <h3 class="h portfolio__figure-h">Citizen Frame</h3>
+            <p class="portfolio__p">Visit at <a class="portfolio__a" href="http://citizenframe.com/">citizenframe.com/</a>. Website build completely using HTML, CSS and JavaScript.</p>
+          </figcaption>
+        </figure>
+        <figure class="portfolio__flex-item">
+          <img class="image" src="images/fresh-tomatoes_700w.jpg" alt="Movie Trailer Website Screenshot" srcset="images/fresh-tomatoes_1000w.jpg 1000w, images/fresh-tomatoes_700w.jpg 700w, images/fresh-tomatoes_350w.jpg 350w" sizes="(min-width: 1040px) 324px, (min-width: 640px) 47vw, 93vw">
+          <figcaption class="portfolio__caption">
+            <h3 class="h portfolio__figure-h">Movie Trailer</h3>
+            <p class="portfolio__p">Visit <a class="portfolio__a" href="https://github.com/hansschuster/movie_website_excercise">GitHub repository</a>. Udacity Project in object oriented programming in Python.</p>
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+  </main>
+</body>
+</html>

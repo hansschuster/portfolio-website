@@ -1,0 +1,190 @@
+/****
+  BEM naming methodolgy is used
+  Code divided by blocks, with block names in comments like --block--
+  2 breakpoints at 640px and 1040px, see bottom of this document
+****/
+
+/****
+  Box-sizing inheritance first, though
+****/
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+
+/* --html-- */
+.html {
+  box-sizing: border-box;
+}
+
+
+/* --body-- */
+.body {
+  width: 100%;
+  margin: 0 auto;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+.body_page-portfolio {
+  max-width: 1040px;
+  padding: 0 20px;
+  background-color: #efefef;
+}
+
+
+/* --header-- */
+.header {
+  width: 100%;
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header_border-bottom {
+  border-bottom: 2px solid #7d97ad;
+}
+
+.header__logo {
+  width: 90px;
+  height: 100px;
+  margin: 0;
+  padding: 10px 10px 10px 0;
+}
+
+.header__heading-group {
+  align-self: center;
+  text-align: right;
+  padding: 5px 0 5px;
+}
+
+.header__h {
+  margin: 0 0 5px;
+  color: #2d3c49;
+  text-transform: uppercase;
+}
+
+.header__h_pos-bottom {
+  font-size: 1.2em;
+}
+
+
+/* --main-- */
+.main {
+  width: 100%;
+  margin: 20px 0 0;
+}
+
+
+/* --hero-- */
+.hero {
+  margin: 0;
+}
+
+
+/* --portfolio-- */
+.portfolio {
+  margin: 20px 0 0;
+}
+
+.portfolio__h {
+  margin: 0 5px 10px;
+  color: #7d97ad;
+  font-size: 1.6em;
+}
+
+.portfolio__flex-container {
+  display: -ms-flex;
+  display: -webkit-flex;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.portfolio__flex-item {
+  width: 100%;
+  margin: 0;
+}
+
+.portfolio__caption {
+  padding: 10px 10px;
+}
+
+.portfolio__figure-h {
+  text-align: center;
+  margin: 0 0 5px;
+  font-size: 1.6em;
+  color: #2d3c49;
+  text-transform: uppercase;
+}
+
+.portfolio__p {
+  margin: 0 auto 10px;
+  max-width: 450px;
+}
+
+.portfolio__a {
+  text-decoration: none;
+  color: #7d97ad;
+}
+
+.portfolio__a:hover {
+  color: #000;
+}
+
+
+/* --h-- */
+.h {
+  font-weight: 400;
+}
+
+
+/* --image-- */
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+
+/****
+  Breakpoint 1: 640px
+****/
+@media screen and (min-width: 640px) {
+  /* --portfolio-- */
+  .portfolio__flex-item {
+    width: 50%;
+  }
+
+  .portfolio__flex-item:nth-child(odd) {
+    padding-right: 10px;
+  }
+
+  .portfolio__flex-item:nth-child(even) {
+    padding-left: 10px;
+  }
+}
+
+
+/****
+  Breakpoint 2: 1040px
+****/
+@media screen and (min-width: 1040px) {
+  /* --portfolio-- */
+  .portfolio__flex-item {
+    width: 33.33333333333%;
+  }
+
+  .portfolio__flex-item:nth-child(3n+1) {
+    padding: 0 10px 0 0;
+  }
+
+  .portfolio__flex-item:nth-child(3n+2) {
+    padding: 0 10px;
+  }
+
+  .portfolio__flex-item:nth-child(3n) {
+    padding: 0 0 0 10px;
+  }
+}
